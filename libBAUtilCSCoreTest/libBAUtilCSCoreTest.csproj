@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <AssemblyVersion>1.0.2.21111</AssemblyVersion>
+    <FileVersion>1.0.2.24222</FileVersion>
+    <StartupObject>libBAUtilCSTest.Program</StartupObject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\libBAUtilCoreCS\libBAUtilCoreCS.csproj" />
+  </ItemGroup>
+
+</Project>
