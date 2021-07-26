@@ -137,7 +137,11 @@ namespace libBAUtilCoreCS.Utils.Args
 
       }
 
-
+      private Boolean ParseCmd(string sArgs)
+      {
+         string[] asArgs = sArgs.Split(Convert.ToChar(DelimiterArgs));
+         return ParseCmd(asArgs);
+      }
 
       /// <summary>
       /// Parses a single key/pair combo into a matching <see cref="KeyValue"/> object
@@ -161,39 +165,316 @@ namespace libBAUtilCoreCS.Utils.Args
             KeyValue o = new KeyValue(sParam);
 
             // '/file' for /file=MyFile.txt
-            KeyLong = Left(sParam, InStr(sParam, DelimiterValue) - 1).Trim
+            o.KeyLong = Left(sParam, sParam.IndexOf(DelimiterValue) - 1).Trim();
             // Remove the leading delimiter, results in 'file'
-            If.KeyLong.IndexOf(Me.DelimiterArgs) > -1 Then
-               .KeyLong = Mid(.KeyLong, Me.DelimiterArgs.Length + 1)
-            End If
+            if (o.KeyLong.IndexOf(DelimiterArgs) > -1)
+            {
+               o.KeyLong = Mid(o.KeyLong, DelimiterArgs.Length + 1);
+            }
             // Since we parse this from the command line, set both
-            .KeyShort = .KeyLong
-            .Value = Mid(sParam, InStr(sParam, DelimiterValue) + 1)
+            o.KeyShort = o.KeyLong;
+            o.Value = Mid(sParam, sParam.IndexOf(DelimiterValue) + 1);
 
-            .KeyValues.Add(o)
+            KeyValues.Add(o);
+         }
+         else
+         {
 
-         Else
-            ' Parameter of the form /Value.
-            ' These are considered to be boolean parameters. If present, their value is 'True'
+            // Parameter of the form /Value.
+            // These are considered to be boolean parameters. If present, their value is 'true'
 
-            Dim o As New KeyValue(sParam)
+            KeyValue o = new KeyValue(sParam);
 
-            With o
-               .KeyLong = sParam.Trim
-               If .KeyLong.IndexOf(Me.DelimiterArgs) > -1 Then
-                  .KeyLong = Mid(.KeyLong, Me.DelimiterArgs.Length + 1)
-               End If
-               ' Since we parse this from the command line, set both
-               .KeyShort = .KeyLong
-               .Value = True
-            End With
+            o.KeyLong = sParam.Trim();
+            if (o.KeyLong.IndexOf(DelimiterArgs) > -1)
+            {
+               o.KeyLong = Mid(o.KeyLong, DelimiterArgs.Length + 1);
+            }
+            // Since we parse this from the command line, set both
+            o.KeyShort = o.KeyLong;
+            o.Value = true;
 
-            .KeyValues.Add(o)
+            KeyValues.Add(o);
+         }
+         return true;
+      }  // ParseParam
 
-         End If
 
-               return true;
+      /// <summary>
+      /// Retrieve the parameter delimiter according to the OS' typical flavor
+      /// </summary>
+      /// <returns>OS typical parameter delimiter</returns>
+      private string GetDefaultDelimiterForOS()
+      {
+         if (System.Runtime.InteropServices.RuntimeInformation.IsOSPlatform(System.Runtime.InteropServices.OSPlatform.Windows))
+         {
+            return DELIMITER_ARGS_WIN;
+         }
+         else
+         {
+            return DELIMITER_ARGS_POSIX;
+         }
+      }
 
+      #endregion
+
+      #region "Methods - Public"
+
+      /// <summary>
+      /// Initializes the object by parsing System.Environment.GetCommandLineArgs()
+      /// </summary>
+      /// <returns></returns>
+      public Boolean Initialize(string cmdLineArgs = "")
+      {
+
+         // Clear everything, as we're parsing anew.
+         KeyValues = new List<KeyValue>();
+
+         if (cmdLineArgs.Length< 1)
+         {
+            string[] asArgs = System.Environment.GetCommandLineArgs();
+            // When using System.Environment.GetCommandLineArgs(), the 1st array element is the executable's name
+            return ParseCmd(asArgs, 1);
+         }
+         else
+         {
+            return ParseCmd(cmdLineArgs);
+         }
+      }  // Initialize
+
+      /// <summary>
+      /// Validates all passed parameters
+      /// </summary>
+      public void Validate()
+      {
+         // Safe guard
+         if (KeyValues.Count < 1)
+         {
+            return;
+         }
+
+         // Any duplicates?
+         for (Int32 i = 0; i <= KeyValues.Count - 1; i++)
+         {
+            KeyValue o = KeyValues[i];
+            if (HasDuplicate(o, i) == true)
+            {
+               throw new ArgumentException(String.Format("Duplicate parameter: {0}", o.Key));
+            }
+         }
+
+      }  // Validate
+
+      /// <summary>
+      /// Determine if a certain parameter is present
+      /// </summary>
+      /// <param name="key">Parameter's name(<see cref = "KeyValue.Key" />)</param>
+      /// <returns></returns>
+      public Boolean HasParameter(string key)
+      {
+         foreach (KeyValue o in KeyValues)
+         {
+
+            if (CaseSensitive == true)
+            {
+               if (o.Key == key) { return true; }
+            }
+            else
+            {
+               if (o.Key.ToLower() == key.ToLower()) { return true; }
+            }
+         }
+
+         return false;
+      }  // HasParameter
+
+      /// <summary>
+      /// Determine if a certain parameter is present
+      /// </summary>
+      /// <param name="paramlist">List of parameter names (<see cref="KeyValue.Key"/>)</param>
+      /// <returns>
+      /// <see langword="true"/> if all parameters passed are present, otherwise <see langword="false"/>
+      /// </returns>
+      public Boolean HasParameter(List<string> paramList)
+      {
+         foreach (string s in paramList)
+            {
+               if (HasParameter(s) == false) { return false; }
+            }
+            // Reaching here, all parameters have been found
+         return true;
+      }  // HasParameter
+
+      /// <summary>
+      /// Return the corresponding KeyValue object
+      /// </summary>
+      /// <param name="key">The parameter's name(<see cref = "KeyValue.Key" /></ param >
+      /// <param name="caseSensitive">Treat the name as case-sensitive?</param>
+      /// <returns><see cref="KeyValue"/> whose <see cref="KeyValue.Key"/> equals <paramref name="key"/>.</returns>
+      public KeyValue GetParameterByName(string key, Boolean caseSensitive = false)
+      {
+
+         // Safe guard
+         if (HasParameter(key) == false) { throw new ArgumentException("Parameter doesn't exist: " + key); }
+
+         foreach (KeyValue o in KeyValues)
+         {
+            if (caseSensitive == false)
+            {
+               if (o.Key.ToLower() == key.ToLower()) { return o; }
+            }
+            else
+            {
+               if (o.Key == key) { return o; }
+            }
+         }
+
+         // We should never reach this point
+         return null;
+
+      }  // GetParameterByName
+
+      /// <summary>
+      /// Return the value of a parameter
+      /// </summary>
+      /// <param name="key">The parameter's name(<see cref = "KeyValue.Key" /></ param >
+      /// <param name="caseSensitive">Treat the name as case-sensitive?</param>
+      /// <returns></returns>
+      public Object GetValueByName(string key, Boolean caseSensitive = false)
+      {
+
+         // Safe guard
+         if (HasParameter(key) == false) { throw new ArgumentException("Parameter doesn't exist: " + key); }
+
+         foreach (KeyValue o in KeyValues)
+         {
+            if (caseSensitive == false)
+            {
+               if (o.Key.ToLower() == key) { return o.Value; }
+            }
+            else
+            {
+               if (o.Key == key) { return o.Value; }
+            }
+         }
+         // We should never reach this point
+         return null;
+      }  // GetValueByName
+
+      #endregion
+
+      #region "Constructor/Dispose"
+      
+      public CmdArgs()
+      {
+         DelimiterArgs = GetDefaultDelimiterForOS();
+         DelimiterValue = DELIMITER_VALUE;
+         ValidParameters = new List<String>();
+      }
+
+      public CmdArgs(List<string> validParams = null)
+      {
+         DelimiterArgs = GetDefaultDelimiterForOS();
+         DelimiterValue = DELIMITER_VALUE;
+         if (validParams != null)
+         {
+            ValidParameters = validParams;
+         }
+         else
+         {
+            ValidParameters = new List<string>();
+         }
+      }
+
+      public CmdArgs(string delimiterArgs = DELIMITER_ARGS_WIN, string delimiterValue = DELIMITER_VALUE,
+                     List<string> validParams  = null)
+      {
+         // Safe guard
+         if (delimiterArgs.Length < 1 || delimiterValue.Length< 1) { throw new ArgumentOutOfRangeException("Empty argument or key/value delimiter are not allowed."); }
+
+         DelimiterArgs = delimiterArgs;
+         DelimiterValue = delimiterValue;
+         KeyValues = new List<KeyValue>();
+         if (validParams != null)
+         {
+            ValidParameters = validParams;
+         }
+         else
+         {
+            ValidParameters = new List<string>(); ;
+         }
+      }
+
+      public CmdArgs(eArgumentDelimiterStyle delimiterArgsType = eArgumentDelimiterStyle.Windows,
+                     string delimiterValue = DELIMITER_VALUE,
+                     List<string> validParams = null)
+      {
+
+         // Safe guard
+         if (delimiterValue.Length < 1) { throw new ArgumentOutOfRangeException("Empty argument or key/value delimiter are not allowed."); }
+
+         if (delimiterArgsType == eArgumentDelimiterStyle.Windows)
+         {
+            DelimiterArgs = DELIMITER_ARGS_WIN;
+         }
+         else
+         {
+            DelimiterArgs = DELIMITER_ARGS_POSIX;
+         }
+         DelimiterValue = delimiterValue;
+         KeyValues = new List<KeyValue>();
+         if (validParams != null)
+         {
+            ValidParameters = validParams;
+         }
+         else
+         {
+            ValidParameters = new List<string>();
+         }
+      }
+
+      public CmdArgs(List<KeyValue> keyValueList, string delimiterArgs = DELIMITER_ARGS_WIN,
+                     string delimiterValue  = DELIMITER_VALUE)
+      {
+
+         // Safe guard
+         if (delimiterArgs.Length < 1 || delimiterValue.Length < 1) { throw new ArgumentOutOfRangeException("Empty argument or key/value delimiter are not allowed."); }
+
+         DelimiterArgs = delimiterArgs;
+         DelimiterValue = delimiterValue;
+         KeyValues = keyValueList;
+         // Create the list of valid parameter names from the passed collection
+         ValidParameters = new List<string>();
+         foreach (KeyValue o in KeyValues)
+         {
+            ValidParameters.Add(o.Key);
+         }
+      }
+
+
+      public CmdArgs(List<KeyValue> keyValueList, eArgumentDelimiterStyle delimiterArgsType  = eArgumentDelimiterStyle.Windows,
+                  string delimiterValue = DELIMITER_VALUE)
+      {
+
+         // Safe guard
+         if (delimiterValue.Length < 1) { throw new ArgumentOutOfRangeException("Empty argument or key/value delimiter are not allowed."); }
+
+         if (delimiterArgsType == eArgumentDelimiterStyle.Windows)
+         {
+            DelimiterArgs = DELIMITER_ARGS_WIN;
+         }
+         else
+         {
+            DelimiterArgs = DELIMITER_ARGS_POSIX;
+         }
+         DelimiterValue = delimiterValue;
+         KeyValues = keyValueList;
+         // Create the list of valid parameter names from the passed collection
+         ValidParameters = new List<string>();
+         foreach (KeyValue o in KeyValues)
+         {
+            ValidParameters.Add(o.Key);
+         }
       }
 
 

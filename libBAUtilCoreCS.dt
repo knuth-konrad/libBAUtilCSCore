@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-16"?>
+<DevTrackerData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" SolutionTotalEditTime="PT3H19M8.1884292S" SolutionTotalViewTime="PT22M48.1644905S" SolutionTotalDebugTime="PT0S">
+  <FileVersion>
+    <Major>1</Major>
+    <Minor>0</Minor>
+  </FileVersion>
+  <SolutionFolder>D:\DATA\KFM\CSharp\zLIBRARY\BasicAware\libBAUtilCoreCS</SolutionFolder>
+  <SolutionCreattionDate>2021-07-21T15:27:50.5963922+02:00</SolutionCreattionDate>
+  <ProjectsCreatedDateList>
+    <ProjectCreated>
+      <ProjectName>D:\DATA\KFM\CSharp\zLIBRARY\BasicAware\libBAUtilCoreCS\libBAUtilCoreCS\libBAUtilCoreCS.csproj</ProjectName>
+      <CreatedDate>2021-07-15T10:29:15.183318+02:00</CreatedDate>
+    </ProjectCreated>
+    <ProjectCreated>
+      <ProjectName>D:\DATA\KFM\CSharp\zLIBRARY\BasicAware\libBAUtilCoreCS\libBAUtilCSCoreTest\libBAUtilCSCoreTest.csproj</ProjectName>
+      <CreatedDate>2021-07-15T10:29:15.0682676+02:00</CreatedDate>
+    </ProjectCreated>
+  </ProjectsCreatedDateList>
+  <SessionTimeList />
+  <LastSessionTimeList>
+    <DevTrackerDataItem ViewActiveTime="PT6M51.158589S" EditActiveTime="PT57M37.2576659S">
+      <ModifiedDate>2021-07-23T17:51:48.0731466+02:00</ModifiedDate>
+      <ModifiedBy>kkonrad</ModifiedBy>
+      <EditedCount>1</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>D:\DATA\KFM\CSharp\zLIBRARY\BasicAware\libBAUtilCoreCS\libBAUtilCoreCS\CmdArgs.cs</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>D:\DATA\KFM\CSharp\zLIBRARY\BasicAware\libBAUtilCoreCS\libBAUtilCoreCS\libBAUtilCoreCS.csproj</ProjectName>
+      <CreatedDate>2021-07-23T14:05:01.0882241+02:00</CreatedDate>
+      <ViewedBy>kkonrad</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT2M49.8398159S" EditActiveTime="PT0S">
+      <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
+      <EditedCount>0</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>D:\DATA\KFM\CSharp\zLIBRARY\BasicAware\libBAUtilCoreCS\libBAUtilCoreCS\StringUtil.cs</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>D:\DATA\KFM\CSharp\zLIBRARY\BasicAware\libBAUtilCoreCS\libBAUtilCoreCS\libBAUtilCoreCS.csproj</ProjectName>
+      <CreatedDate>2021-07-23T14:11:48.9849243+02:00</CreatedDate>
+      <ViewedBy>kkonrad</ViewedBy>
+    </DevTrackerDataItem>
+  </LastSessionTimeList>
+  <TotalTimeList>
+    <DevTrackerDataItem ViewActiveTime="PT39.0907859S" EditActiveTime="PT0S">
+      <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
+      <EditedCount>0</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>D:\DATA\KFM\CSharp\zLIBRARY\BasicAware\libBAUtilCoreCS\libBAUtilCoreCS\baUtil.cs</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>D:\DATA\KFM\CSharp\zLIBRARY\BasicAware\libBAUtilCoreCS\libBAUtilCoreCS\libBAUtilCoreCS.csproj</ProjectName>
+      <CreatedDate>2021-07-21T15:51:25.2536793+02:00</CreatedDate>
+      <ViewedBy>kkonrad</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT12M7.8423525S" EditActiveTime="PT2H24M33.1087003S">
+      <ModifiedDate>2021-07-23T17:51:48.0731466+02:00</ModifiedDate>
+      <ModifiedBy>kkonrad</ModifiedBy>
+      <EditedCount>3</EditedCount>
+      <ViewedCount>4</ViewedCount>
+      <Item>D:\DATA\KFM\CSharp\zLIBRARY\BasicAware\libBAUtilCoreCS\libBAUtilCoreCS\CmdArgs.cs</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>D:\DATA\KFM\CSharp\zLIBRARY\BasicAware\libBAUtilCoreCS\libBAUtilCoreCS\libBAUtilCoreCS.csproj</ProjectName>
+      <CreatedDate>2021-07-21T17:37:57.6149539+02:00</CreatedDate>
+      <ViewedBy>kkonrad</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT2M12.3116285S" EditActiveTime="PT53M17.3729875S">
+      <ModifiedDate>2021-07-21T17:13:38.0739838+02:00</ModifiedDate>
+      <ModifiedBy>kkonrad</ModifiedBy>
+      <EditedCount>1</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>D:\DATA\KFM\CSharp\zLIBRARY\BasicAware\libBAUtilCoreCS\libBAUtilCoreCS\ConsoleUtil.cs</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>D:\DATA\KFM\CSharp\zLIBRARY\BasicAware\libBAUtilCoreCS\libBAUtilCoreCS\libBAUtilCoreCS.csproj</ProjectName>
+      <CreatedDate>2021-07-21T16:02:00.2106711+02:00</CreatedDate>
+      <ViewedBy>kkonrad</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT32.8274352S" EditActiveTime="PT1M17.7057459S">
+      <ModifiedDate>2021-07-21T16:48:02.1354764+02:00</ModifiedDate>
+      <ModifiedBy>kkonrad</ModifiedBy>
+      <EditedCount>1</EditedCount>
+      <ViewedCount>2</ViewedCount>
+      <Item>D:\DATA\KFM\CSharp\zLIBRARY\BasicAware\libBAUtilCoreCS\libBAUtilCoreCS\DateTimeUtil.cs</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>D:\DATA\KFM\CSharp\zLIBRARY\BasicAware\libBAUtilCoreCS\libBAUtilCoreCS\libBAUtilCoreCS.csproj</ProjectName>
+      <CreatedDate>2021-07-21T15:57:17.6025842+02:00</CreatedDate>
+      <ViewedBy>kkonrad</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT23.6522909S" EditActiveTime="PT0S">
+      <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
+      <EditedCount>0</EditedCount>
+      <ViewedCount>2</ViewedCount>
+      <Item>D:\DATA\KFM\CSharp\zLIBRARY\BasicAware\libBAUtilCoreCS\libBAUtilCoreCS\FilesystemUtil.cs</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>D:\DATA\KFM\CSharp\zLIBRARY\BasicAware\libBAUtilCoreCS\libBAUtilCoreCS\libBAUtilCoreCS.csproj</ProjectName>
+      <CreatedDate>2021-07-21T15:57:20.5838453+02:00</CreatedDate>
+      <ViewedBy>kkonrad</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT22.5351898S" EditActiveTime="PT0S">
+      <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
+      <EditedCount>0</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>D:\DATA\KFM\CSharp\zLIBRARY\BasicAware\libBAUtilCoreCS\libBAUtilCoreCS\FileUtil.cs</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>D:\DATA\KFM\CSharp\zLIBRARY\BasicAware\libBAUtilCoreCS\libBAUtilCoreCS\libBAUtilCoreCS.csproj</ProjectName>
+      <CreatedDate>2021-07-21T15:57:25.5172497+02:00</CreatedDate>
+      <ViewedBy>kkonrad</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT2M15.490035S" EditActiveTime="PT0S">
+      <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
+      <EditedCount>0</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>D:\DATA\KFM\CSharp\zLIBRARY\BasicAware\libBAUtilCoreCS\libBAUtilCoreCS\ObjectUtil.cs</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>D:\DATA\KFM\CSharp\zLIBRARY\BasicAware\libBAUtilCoreCS\libBAUtilCoreCS\libBAUtilCoreCS.csproj</ProjectName>
+      <CreatedDate>2021-07-21T15:57:28.8073244+02:00</CreatedDate>
+      <ViewedBy>kkonrad</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT21.9042376S" EditActiveTime="PT0S">
+      <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
+      <EditedCount>0</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>D:\DATA\KFM\CSharp\zLIBRARY\BasicAware\libBAUtilCoreCS\libBAUtilCSCoreTest\Program.cs</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>D:\DATA\KFM\CSharp\zLIBRARY\BasicAware\libBAUtilCoreCS\libBAUtilCSCoreTest\libBAUtilCSCoreTest.csproj</ProjectName>
+      <CreatedDate>2021-07-21T15:57:40.6728793+02:00</CreatedDate>
+      <ViewedBy>kkonrad</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT3M52.5115289S" EditActiveTime="PT0S">
+      <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
+      <EditedCount>0</EditedCount>
+      <ViewedCount>2</ViewedCount>
+      <Item>D:\DATA\KFM\CSharp\zLIBRARY\BasicAware\libBAUtilCoreCS\libBAUtilCoreCS\StringUtil.cs</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>D:\DATA\KFM\CSharp\zLIBRARY\BasicAware\libBAUtilCoreCS\libBAUtilCoreCS\libBAUtilCoreCS.csproj</ProjectName>
+      <CreatedDate>2021-07-21T15:51:11.2432012+02:00</CreatedDate>
+      <ViewedBy>kkonrad</ViewedBy>
+    </DevTrackerDataItem>
+  </TotalTimeList>
+  <HistoryTimeList>
+    <DevTrackerDataItem ViewActiveTime="PT2M49.8398159S" EditActiveTime="PT0S">
+      <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
+      <EditedCount>0</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>D:\DATA\KFM\CSharp\zLIBRARY\BasicAware\libBAUtilCoreCS\libBAUtilCoreCS\StringUtil.cs</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>D:\DATA\KFM\CSharp\zLIBRARY\BasicAware\libBAUtilCoreCS\libBAUtilCoreCS\libBAUtilCoreCS.csproj</ProjectName>
+      <CreatedDate>2021-07-23T14:11:48.9849243+02:00</CreatedDate>
+      <ViewedBy>kkonrad</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT6M51.1545879S" EditActiveTime="PT57M37.2576659S">
+      <ModifiedDate>2021-07-23T17:51:48.0731466+02:00</ModifiedDate>
+      <ModifiedBy>kkonrad</ModifiedBy>
+      <EditedCount>1</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>D:\DATA\KFM\CSharp\zLIBRARY\BasicAware\libBAUtilCoreCS\libBAUtilCoreCS\CmdArgs.cs</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>D:\DATA\KFM\CSharp\zLIBRARY\BasicAware\libBAUtilCoreCS\libBAUtilCoreCS\libBAUtilCoreCS.csproj</ProjectName>
+      <CreatedDate>2021-07-23T14:05:01.0882241+02:00</CreatedDate>
+      <ViewedBy>kkonrad</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT18.7199493S" EditActiveTime="PT0S">
+      <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
+      <EditedCount>0</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>D:\DATA\KFM\CSharp\zLIBRARY\BasicAware\libBAUtilCoreCS\libBAUtilCoreCS\FilesystemUtil.cs</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>D:\DATA\KFM\CSharp\zLIBRARY\BasicAware\libBAUtilCoreCS\libBAUtilCoreCS\libBAUtilCoreCS.csproj</ProjectName>
+      <CreatedDate>2021-07-22T14:19:44.4558505+02:00</CreatedDate>
+      <ViewedBy>kkonrad</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT1.6353613S" EditActiveTime="PT0S">
+      <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
+      <EditedCount>0</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>D:\DATA\KFM\CSharp\zLIBRARY\BasicAware\libBAUtilCoreCS\libBAUtilCoreCS\DateTimeUtil.cs</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>D:\DATA\KFM\CSharp\zLIBRARY\BasicAware\libBAUtilCoreCS\libBAUtilCoreCS\libBAUtilCoreCS.csproj</ProjectName>
+      <CreatedDate>2021-07-22T14:19:42.8194886+02:00</CreatedDate>
+      <ViewedBy>kkonrad</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT4M33.4774084S" EditActiveTime="PT1H9M7.3668321S">
+      <ModifiedDate>2021-07-22T17:55:02.7357863+02:00</ModifiedDate>
+      <ModifiedBy>kkonrad</ModifiedBy>
+      <EditedCount>1</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>D:\DATA\KFM\CSharp\zLIBRARY\BasicAware\libBAUtilCoreCS\libBAUtilCoreCS\CmdArgs.cs</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>D:\DATA\KFM\CSharp\zLIBRARY\BasicAware\libBAUtilCoreCS\libBAUtilCoreCS\libBAUtilCoreCS.csproj</ProjectName>
+      <CreatedDate>2021-07-22T10:37:29.1080167+02:00</CreatedDate>
+      <ViewedBy>kkonrad</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT22.8355443S" EditActiveTime="PT0S">
+      <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
+      <EditedCount>0</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>D:\DATA\KFM\CSharp\zLIBRARY\BasicAware\libBAUtilCoreCS\libBAUtilCoreCS\CmdArgs.cs</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>D:\DATA\KFM\CSharp\zLIBRARY\BasicAware\libBAUtilCoreCS\libBAUtilCoreCS\libBAUtilCoreCS.csproj</ProjectName>
+      <CreatedDate>2021-07-22T09:22:20.2360659+02:00</CreatedDate>
+      <ViewedBy>kkonrad</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT20.3778265S" EditActiveTime="PT17M48.4842023S">
+      <ModifiedDate>2021-07-21T18:08:18.0180831+02:00</ModifiedDate>
+      <ModifiedBy>kkonrad</ModifiedBy>
+      <EditedCount>1</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>D:\DATA\KFM\CSharp\zLIBRARY\BasicAware\libBAUtilCoreCS\libBAUtilCoreCS\CmdArgs.cs</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>D:\DATA\KFM\CSharp\zLIBRARY\BasicAware\libBAUtilCoreCS\libBAUtilCoreCS\libBAUtilCoreCS.csproj</ProjectName>
+      <CreatedDate>2021-07-21T17:37:57.6149539+02:00</CreatedDate>
+      <ViewedBy>kkonrad</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT2M12.3116285S" EditActiveTime="PT53M17.3729875S">
+      <ModifiedDate>2021-07-21T17:13:38.0739838+02:00</ModifiedDate>
+      <ModifiedBy>kkonrad</ModifiedBy>
+      <EditedCount>1</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>D:\DATA\KFM\CSharp\zLIBRARY\BasicAware\libBAUtilCoreCS\libBAUtilCoreCS\ConsoleUtil.cs</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>D:\DATA\KFM\CSharp\zLIBRARY\BasicAware\libBAUtilCoreCS\libBAUtilCoreCS\libBAUtilCoreCS.csproj</ProjectName>
+      <CreatedDate>2021-07-21T16:02:00.2106711+02:00</CreatedDate>
+      <ViewedBy>kkonrad</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT21.9042376S" EditActiveTime="PT0S">
+      <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
+      <EditedCount>0</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>D:\DATA\KFM\CSharp\zLIBRARY\BasicAware\libBAUtilCoreCS\libBAUtilCSCoreTest\Program.cs</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>D:\DATA\KFM\CSharp\zLIBRARY\BasicAware\libBAUtilCoreCS\libBAUtilCSCoreTest\libBAUtilCSCoreTest.csproj</ProjectName>
+      <CreatedDate>2021-07-21T15:57:40.6728793+02:00</CreatedDate>
+      <ViewedBy>kkonrad</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT2M15.490035S" EditActiveTime="PT0S">
+      <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
+      <EditedCount>0</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>D:\DATA\KFM\CSharp\zLIBRARY\BasicAware\libBAUtilCoreCS\libBAUtilCoreCS\ObjectUtil.cs</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>D:\DATA\KFM\CSharp\zLIBRARY\BasicAware\libBAUtilCoreCS\libBAUtilCoreCS\libBAUtilCoreCS.csproj</ProjectName>
+      <CreatedDate>2021-07-21T15:57:28.8073244+02:00</CreatedDate>
+      <ViewedBy>kkonrad</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT22.5351898S" EditActiveTime="PT0S">
+      <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
+      <EditedCount>0</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>D:\DATA\KFM\CSharp\zLIBRARY\BasicAware\libBAUtilCoreCS\libBAUtilCoreCS\FileUtil.cs</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>D:\DATA\KFM\CSharp\zLIBRARY\BasicAware\libBAUtilCoreCS\libBAUtilCoreCS\libBAUtilCoreCS.csproj</ProjectName>
+      <CreatedDate>2021-07-21T15:57:25.5172497+02:00</CreatedDate>
+      <ViewedBy>kkonrad</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT4.9323416S" EditActiveTime="PT0S">
+      <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
+      <EditedCount>0</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>D:\DATA\KFM\CSharp\zLIBRARY\BasicAware\libBAUtilCoreCS\libBAUtilCoreCS\FilesystemUtil.cs</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>D:\DATA\KFM\CSharp\zLIBRARY\BasicAware\libBAUtilCoreCS\libBAUtilCoreCS\libBAUtilCoreCS.csproj</ProjectName>
+      <CreatedDate>2021-07-21T15:57:20.5838453+02:00</CreatedDate>
+      <ViewedBy>kkonrad</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT31.1920739S" EditActiveTime="PT1M17.7057459S">
+      <ModifiedDate>2021-07-21T16:48:02.1354764+02:00</ModifiedDate>
+      <ModifiedBy>kkonrad</ModifiedBy>
+      <EditedCount>1</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>D:\DATA\KFM\CSharp\zLIBRARY\BasicAware\libBAUtilCoreCS\libBAUtilCoreCS\DateTimeUtil.cs</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>D:\DATA\KFM\CSharp\zLIBRARY\BasicAware\libBAUtilCoreCS\libBAUtilCoreCS\libBAUtilCoreCS.csproj</ProjectName>
+      <CreatedDate>2021-07-21T15:57:17.6025842+02:00</CreatedDate>
+      <ViewedBy>kkonrad</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT39.0907859S" EditActiveTime="PT0S">
+      <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
+      <EditedCount>0</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>D:\DATA\KFM\CSharp\zLIBRARY\BasicAware\libBAUtilCoreCS\libBAUtilCoreCS\baUtil.cs</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>D:\DATA\KFM\CSharp\zLIBRARY\BasicAware\libBAUtilCoreCS\libBAUtilCoreCS\libBAUtilCoreCS.csproj</ProjectName>
+      <CreatedDate>2021-07-21T15:51:25.2536793+02:00</CreatedDate>
+      <ViewedBy>kkonrad</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT1M2.671713S" EditActiveTime="PT0S">
+      <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
+      <EditedCount>0</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>D:\DATA\KFM\CSharp\zLIBRARY\BasicAware\libBAUtilCoreCS\libBAUtilCoreCS\StringUtil.cs</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>D:\DATA\KFM\CSharp\zLIBRARY\BasicAware\libBAUtilCoreCS\libBAUtilCoreCS\libBAUtilCoreCS.csproj</ProjectName>
+      <CreatedDate>2021-07-21T15:51:11.2432012+02:00</CreatedDate>
+      <ViewedBy>kkonrad</ViewedBy>
+    </DevTrackerDataItem>
+  </HistoryTimeList>
+</DevTrackerData>
