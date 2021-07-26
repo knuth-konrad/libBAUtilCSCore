@@ -7,6 +7,9 @@
 *.userosscache
 *.sln.docstates
 
+# DevTracker settings
+libBAUtilCoreCS.*dt
+
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 
