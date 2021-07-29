@@ -4,7 +4,7 @@ using System.Globalization;
 using System.Text;
 using System.Diagnostics;
 
-namespace libBAUtilCoreCS
+namespace libBAUtilCS
 {
 
    /// <summary>
@@ -323,11 +323,13 @@ namespace libBAUtilCoreCS
          {
             if (startIndex + length > source.Length || length == 0)
             {
-               return source.Substring(startIndex - 1);
+               // return source.Substring(startIndex - 1);
+               return source.Substring(startIndex);
             }
             else
             {
-               return source.Substring(startIndex - 1, length);
+               // return source.Substring(startIndex - 1, length);
+               return source.Substring(startIndex, length);
             }
          }
          catch

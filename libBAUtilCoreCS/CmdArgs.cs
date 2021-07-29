@@ -2,9 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-using static libBAUtilCoreCS.StringUtil;
+using static libBAUtilCS.StringUtil;
 
-namespace libBAUtilCoreCS.Utils.Args
+namespace libBAUtilCS.Utils.Args
 {
 
    /// <summary>
@@ -12,7 +12,7 @@ namespace libBAUtilCoreCS.Utils.Args
    /// See https://docs.microsoft.com/en-us/archive/msdn-magazine/2019/march/net-parse-the-command-line-with-system-commandline
    /// See https://github.com/commandlineparser/commandline
    /// </summary>
-   class CmdArgs
+   public class CmdArgs
    {
 
       #region "Declarations
@@ -165,11 +165,11 @@ namespace libBAUtilCoreCS.Utils.Args
             KeyValue o = new KeyValue(sParam);
 
             // '/file' for /file=MyFile.txt
-            o.KeyLong = Left(sParam, sParam.IndexOf(DelimiterValue) - 1).Trim();
+            o.KeyLong = Left(sParam, sParam.IndexOf(DelimiterValue)).Trim();
             // Remove the leading delimiter, results in 'file'
             if (o.KeyLong.IndexOf(DelimiterArgs) > -1)
             {
-               o.KeyLong = Mid(o.KeyLong, DelimiterArgs.Length + 1);
+               o.KeyLong = Mid(o.KeyLong, DelimiterArgs.Length);
             }
             // Since we parse this from the command line, set both
             o.KeyShort = o.KeyLong;
@@ -188,7 +188,8 @@ namespace libBAUtilCoreCS.Utils.Args
             o.KeyLong = sParam.Trim();
             if (o.KeyLong.IndexOf(DelimiterArgs) > -1)
             {
-               o.KeyLong = Mid(o.KeyLong, DelimiterArgs.Length + 1);
+               // o.KeyLong = Mid(o.KeyLong, DelimiterArgs.Length + 1);
+               o.KeyLong = Mid(o.KeyLong, DelimiterArgs.Length);
             }
             // Since we parse this from the command line, set both
             o.KeyShort = o.KeyLong;
@@ -482,7 +483,7 @@ namespace libBAUtilCoreCS.Utils.Args
 
    }  // CmdArgs
 
-   class KeyValue
+   public class KeyValue
    {
 
       private string msHelpText = "";
@@ -544,7 +545,7 @@ namespace libBAUtilCoreCS.Utils.Args
      public string OriginalParameter
       {
          get { return msOriginalParameter; }
-         set { msOriginalParameter = value};
+         set { msOriginalParameter = value; }
       }
 
       /// <summary>
