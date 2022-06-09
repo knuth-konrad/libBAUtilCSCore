@@ -1,7 +1,7 @@
 using System;
 using System.Security.Cryptography;
 
-namespace libECKDUtilCS
+namespace libBAUtilCoreCS
 {
    /// <summary>
    /// En-/Decryption helper (3DES).

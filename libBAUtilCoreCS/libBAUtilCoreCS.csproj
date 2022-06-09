@@ -6,4 +6,9 @@
     <FileVersion>1.0.2.24134</FileVersion>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="NLog" Version="5.0.0" />
+    <PackageReference Include="NLog.Schema" Version="5.0.0" />
+  </ItemGroup>
+
 </Project>

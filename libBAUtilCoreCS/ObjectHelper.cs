@@ -1,9 +1,6 @@
 using System;
-// using System.Collections.Generic;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
-// using System.Text;
-// using System.Threading.Tasks;
 using System.Xml;
 using System.Xml.Serialization;
 
@@ -12,7 +9,7 @@ namespace libBAUtilCoreCS
    /// <summary>
    /// General object helpers
    /// </summary>
-   class ObjectUtil
+   public class ObjectHelper
    {
 
       #region "Serialization"
@@ -290,5 +287,5 @@ namespace libBAUtilCoreCS
          return Clone(o);
       }
 
-   }  // class ObjectUtil
+   }  // class ObjectHelper
 }
