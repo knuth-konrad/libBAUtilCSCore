@@ -11,23 +11,31 @@ namespace libBAUtilCoreCS
   /// </summary>
   public class FilesystemHelper
   {
+      /// <summary>
+      /// Standard Windows path delimiter.
+      /// </summary>
+      private const string DELIMITER_PATH_WIN = "\\";
+      /// <summary>
+      /// Standard POSIX ("Linux") path delimiter.
+      /// </summary>
+      private const string DELIMITER_PATH_POSIX = "/";
 
-    /// <summary>
-    /// Ensure a path does NOT end with a path delimiter
-    /// </summary>
-    /// <param name="sPath">
-    /// Path (drive or network share), C:\Windows\ or \\myserver\myshare\
-    /// </param>
-    /// <param name="sDelim">
-    /// Character to be treated as the folder delimiter.
-    /// </param>
-    /// <param name="bolCheckTail">
-    /// Check the start or end (default) of <paramref name="sPath"/>.
-    /// </param>
-    /// <returns>
-    /// <paramref name="sPath"/> with <paramref name="sDelim"/> stripped off, if present.
-    /// </returns>
-    public static string DenormalizePath(string sPath, string sDelim = "\\", bool bolCheckTail = true)
+      /// <summary>
+      /// Ensure a path does NOT end with a path delimiter
+      /// </summary>
+      /// <param name="sPath">
+      /// Path (drive or network share), C:\Windows\ or \\myserver\myshare\
+      /// </param>
+      /// <param name="sDelim">
+      /// Character to be treated as the folder delimiter.
+      /// </param>
+      /// <param name="bolCheckTail">
+      /// Check the start or end (default) of <paramref name="sPath"/>.
+      /// </param>
+      /// <returns>
+      /// <paramref name="sPath"/> with <paramref name="sDelim"/> stripped off, if present.
+      /// </returns>
+      public static string DenormalizePath(string sPath, string sDelim = "\\", bool bolCheckTail = true)
     {
       if (bolCheckTail == true)
       {
@@ -121,35 +129,52 @@ namespace libBAUtilCoreCS
       return Directory.Exists(folder);
     } // FolderExists
 
-    /// <summary>
-    /// Creates a backup of a file by copying/moving it from the source 
-    /// to the target folder.
-    /// </summary>
-    /// <param name="fileSource">
-    /// Fully qualified source file name.
-    /// </param>
-    /// <param name="fileDest">
-    /// Fully qualified destination file name.
-    /// </param>
-    /// <param name="copyOnly">
-    /// Copy only (True) or move (False)?
-    /// </param>
-    /// <param name="incrementTarget">
-    /// If <paramref name="fileDest"/> exists, create a new file named 
-    /// (file).(nnnn).(ext) instead?
-    /// Please note: duplicate creation is limited to 10,000 files.
-    /// </param>
-    /// <param name="newFile">
-    /// (ByRef!) Returns the (newly created) fully qualified destination file name.
-    /// </param>
-    /// <returns>
-    /// Success: <see langword="true"/>, failure: <see langword="false"/>.
-    /// </returns>
-    /// <remarks>
-    /// If the destination file already exists, but <paramref name="incrementTarget"/> = <see langword="false"/>, 
-    /// the already existing file will be overwritten.
-    /// </remarks>
-    public static bool BackupFile(string fileSource, string fileDest, out string newFile, bool copyOnly = false,
+
+      /// <summary>
+      /// Retrieve the parameter delimiter according to the OS' typical flavor
+      /// </summary>
+      /// <returns>OS typical parameter delimiter</returns>
+      public static string GetDefaultPathDelimiterForOS()
+      {
+         if (System.Runtime.InteropServices.RuntimeInformation.IsOSPlatform(System.Runtime.InteropServices.OSPlatform.Windows))
+         {
+            return DELIMITER_PATH_WIN;
+         }
+         else
+         {
+            return DELIMITER_PATH_POSIX;
+         }
+      }
+
+      /// <summary>
+      /// Creates a backup of a file by copying/moving it from the source 
+      /// to the target folder.
+      /// </summary>
+      /// <param name="fileSource">
+      /// Fully qualified source file name.
+      /// </param>
+      /// <param name="fileDest">
+      /// Fully qualified destination file name.
+      /// </param>
+      /// <param name="copyOnly">
+      /// Copy only (True) or move (False)?
+      /// </param>
+      /// <param name="incrementTarget">
+      /// If <paramref name="fileDest"/> exists, create a new file named 
+      /// (file).(nnnn).(ext) instead?
+      /// Please note: duplicate creation is limited to 10,000 files.
+      /// </param>
+      /// <param name="newFile">
+      /// (ByRef!) Returns the (newly created) fully qualified destination file name.
+      /// </param>
+      /// <returns>
+      /// Success: <see langword="true"/>, failure: <see langword="false"/>.
+      /// </returns>
+      /// <remarks>
+      /// If the destination file already exists, but <paramref name="incrementTarget"/> = <see langword="false"/>, 
+      /// the already existing file will be overwritten.
+      /// </remarks>
+      public static bool BackupFile(string fileSource, string fileDest, out string newFile, bool copyOnly = false,
          bool incrementTarget = true)
     {
       string tempFile = System.String.Empty;
