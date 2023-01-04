@@ -130,7 +130,6 @@ namespace libBAUtilCoreCS
          return Directory.Exists(folder);
       } // FolderExists
 
-
       /// <summary>
       /// Retrieve the parameter delimiter according to the OS' typical flavor
       /// </summary>

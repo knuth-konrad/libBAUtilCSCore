@@ -198,14 +198,17 @@ namespace libBAUtilCoreCS
       Console.ReadKey(true);
     }  // AnyKey
 
-    #endregion
+      #endregion
 
-    /// <summary>
-    /// Insert a blank line at the current position.
-    /// </summary>
-    /// <param name="blankLines">Number of blank lines to insert.</param>
-    /// <param name="addSeparatingLine"><see langword="true"/>: Add a visual separation indicator before the blank line(s)</param>
-    public static void BlankLine(Int32 blankLines = 1, bool addSeparatingLine = false)
+
+      #region BlankLine
+
+      /// <summary>
+      /// Insert a blank line at the current position.
+      /// </summary>
+      /// <param name="blankLines">Number of blank lines to insert.</param>
+      /// <param name="addSeparatingLine"><see langword="true"/>: Add a visual separation indicator before the blank line(s)</param>
+      public static void BlankLine(Int32 blankLines = 1, bool addSeparatingLine = false)
     {
 
       // Safe guard
@@ -226,15 +229,60 @@ namespace libBAUtilCoreCS
 
     }  // BlankLine
 
-    #region WriteIndent
+      /// <summary>
+      /// Insert a blank line at the current position.
+      /// </summary>
+      /// <param name="blankLines">Number of blank lines to insert.</param>
+      public static void BlankLine()
+      {
+         Console.WriteLine("");
+      }  // BlankLine
 
-    /// <summary>
-    /// Output text indented by (<paramref name="indentBy"/>) spaces
-    /// </summary>
-    /// <param name="text">Output text</param>
-    /// <param name="indentBy">Number of leading spaces</param>
-    /// <param name="addNewLine">Add a new line after <paramref name="text"/></param>
-    public static void WriteIndent(string text, Int32 indentBy, bool addNewLine = true)
+      /// <summary>
+      /// Insert a blank line at the current position.
+      /// </summary>
+      /// <param name="blankLines">Number of blank lines to insert.</param>
+      public static void BlankLine(Int32 blankLines = 1)
+      {
+
+         // Safe guard
+         if (blankLines < 1)
+         {
+            blankLines = 1;
+         }
+
+         for (Int32 i = 0; i <= blankLines - 1; i++)
+         {
+            Console.WriteLine("");
+         }
+
+      }  // BlankLine
+
+      /// <summary>
+      /// Insert a blank line at the current position.
+      /// </summary>
+      /// <param name="addSeparatingLine"><see langword="true"/>: Add a visual separation indicator before the blank line(s)</param>
+      public static void BlankLine(bool addSeparatingLine = false)
+      {
+
+         if (addSeparatingLine == true)
+         {
+            Console.WriteLine(ConHelperData.CON_SEPARATOR);
+         }
+         Console.WriteLine("");
+      }  // BlankLine
+
+      #endregion
+
+      #region WriteIndent
+
+      /// <summary>
+      /// Output text indented by (<paramref name="indentBy"/>) spaces
+      /// </summary>
+      /// <param name="text">Output text</param>
+      /// <param name="indentBy">Number of leading spaces</param>
+      /// <param name="addNewLine">Add a new line after <paramref name="text"/></param>
+      public static void WriteIndent(string text, Int32 indentBy, bool addNewLine = true)
     {
       if (addNewLine == true)
       {
@@ -268,38 +316,121 @@ namespace libBAUtilCoreCS
       }
     }  // WriteIndent
 
-    #endregion
+      #endregion
 
-    #region Constructor
+      #region WriteOK
 
-    /// <summary>
-    /// Class Constructor
-    /// </summary>
-    public ConsoleHelper() { }
+      /// <summary>
+      /// Output text in the 'OK' color
+      /// </summary>
+      /// <param name="text">Output text</param>
+      /// <param name="bgColor">Background color.</param>
+      /// <param name="fgColor">Foreground color.</param>
+      /// <param name="addNewLine">Add a new line after the last line of <paramref name="text"/></param>
+      public static void WriteOK(string text, ConsoleColor fgColor = ConsoleColor.Green, ConsoleColor bgColor = ConsoleColor.Black, bool addNewLine = true)
+      {
 
-    /// <summary>
-    /// Class Constructor
-    /// </summary>
-    /// <param name="consoleData">Application developer, copyright holder and line separator.</param>
-    public ConsoleHelper(ConHelperData consoleData)
-    {
-      moConData = consoleData;
-    } // ConsoleHelper(ConHelperData consoleData)
+         Console.BackgroundColor = bgColor;
+         Console.ForegroundColor = fgColor;
+         WriteIndent(text, 0, addNewLine);
+         Console.ResetColor();
 
-    /// <summary>
-    /// Class Constructor
-    /// </summary>
-    /// <param name="authorName">Application developer name</param>
-    /// <param name="companyName">Company / Copyright holder name</param>
-    /// <param name="lineSeparator">Line separator</param>
-    public ConsoleHelper(string authorName, string companyName, string lineSeparator)
-    {
-      ConsoleData.Author = authorName;
-      ConsoleData.Company = companyName;
-      ConsoleData.LineSeparator = lineSeparator;
-    } // ConsoleHelper(string authorName, string companyName, string lineSeparator)
+      }  // WriteOK
 
-    #endregion
+      /// <summary>
+      /// Output text indented by (<paramref name="indentBy"/>) spaces in the 'OK' color
+      /// </summary>
+      /// <param name="text">Output text</param>
+      /// <param name="indentBy">Number of leading spaces</param>
+      /// <param name="bgColor">Background color.</param>
+      /// <param name="fgColor">Foreground color.</param>
+      /// <param name="addNewLine">Add a new line after the last line of <paramref name="text"/></param>
+      public static void WriteOK(string text, Int32 indentBy, ConsoleColor fgColor = ConsoleColor.Green, ConsoleColor bgColor = ConsoleColor.Black, bool addNewLine = true)
+      {
+
+         Console.BackgroundColor = bgColor;
+         Console.ForegroundColor = fgColor;
+         WriteIndent(text, indentBy, addNewLine);
+         Console.ResetColor();
+
+      }  // WriteOK
+
+      /// <summary>
+      /// Output text indented by (<paramref name="indentBy"/>) spaces in the 'OK' color
+      /// </summary>
+      /// <param name="text">Output text</param>
+      /// <param name="indentBy">Number of leading spaces</param>
+      /// <param name="bgColor">Background color.</param>
+      /// <param name="fgColor">Foreground color.</param>
+      /// <param name="addNewLine">Add a new line after the last line of <paramref name="text"/></param>
+      public static void WriteOK(string[] text, Int32 indentBy, ConsoleColor fgColor = ConsoleColor.Green, ConsoleColor bgColor = ConsoleColor.Black, bool addNewLine = true)
+      {
+
+         Console.BackgroundColor = bgColor;
+         Console.ForegroundColor = fgColor;
+         WriteIndent(text, indentBy, addNewLine);
+         Console.ResetColor();
+
+      }  // WriteOK
+
+      #endregion
+
+      #region WriteError
+
+      /// <summary>
+      /// Output text in the 'Error' color
+      /// </summary>
+      /// <param name="text">Output text</param>
+      /// <param name="bgColor">Background color.</param>
+      /// <param name="fgColor">Foreground color.</param>
+      /// <param name="addNewLine">Add a new line after the last line of <paramref name="text"/></param>
+      public static void WriteError(string text, ConsoleColor fgColor = ConsoleColor.Red, ConsoleColor bgColor = ConsoleColor.Black, bool addNewLine = true)
+      {
+
+         Console.BackgroundColor = bgColor;
+         Console.ForegroundColor = fgColor;
+         WriteIndent(text, 0, addNewLine);
+         Console.ResetColor();
+
+      }  // WriteError
+
+      /// <summary>
+      /// Output text indented by (<paramref name="indentBy"/>) spaces in the 'Error' color
+      /// </summary>
+      /// <param name="text">Output text</param>
+      /// <param name="indentBy">Number of leading spaces</param>
+      /// <param name="bgColor">Background color.</param>
+      /// <param name="fgColor">Foreground color.</param>
+      /// <param name="addNewLine">Add a new line after the last line of <paramref name="text"/></param>
+      public static void WriteError(string text, Int32 indentBy, ConsoleColor fgColor = ConsoleColor.Red, ConsoleColor bgColor = ConsoleColor.Black, bool addNewLine = true)
+      {
+
+         Console.BackgroundColor = bgColor;
+         Console.ForegroundColor = fgColor;
+         WriteIndent(text, indentBy, addNewLine);
+         Console.ResetColor();
+
+      }  // WriteError
+
+      /// <summary>
+      /// Output text indented by (<paramref name="indentBy"/>) spaces in the 'Error' color
+      /// </summary>
+      /// <param name="text">Output text</param>
+      /// <param name="indentBy">Number of leading spaces</param>
+      /// <param name="bgColor">Background color.</param>
+      /// <param name="fgColor">Foreground color.</param>
+      /// <param name="addNewLine">Add a new line after the last line of <paramref name="text"/></param>
+      public static void WriteError(string[] text, Int32 indentBy, ConsoleColor fgColor = ConsoleColor.Red, ConsoleColor bgColor = ConsoleColor.Black, bool addNewLine = true)
+      {
+
+         Console.BackgroundColor = bgColor;
+         Console.ForegroundColor = fgColor;
+         WriteIndent(text, indentBy, addNewLine);
+         Console.ResetColor();
+
+      }  // WriteError
+
+      #endregion
 
     /// <summary>
     /// Starts a "spinning wheel" kinda wait time indicator
@@ -390,6 +521,37 @@ namespace libBAUtilCoreCS
 
     }
 
-  }  // class ConsoleHelper
+      #region Constructor
+
+      /// <summary>
+      /// Class Constructor
+      /// </summary>
+      public ConsoleHelper() { }
+
+      /// <summary>
+      /// Class Constructor
+      /// </summary>
+      /// <param name="consoleData">Application developer, copyright holder and line separator.</param>
+      public ConsoleHelper(ConHelperData consoleData)
+      {
+         moConData = consoleData;
+      } // ConsoleHelper(ConHelperData consoleData)
+
+      /// <summary>
+      /// Class Constructor
+      /// </summary>
+      /// <param name="authorName">Application developer name</param>
+      /// <param name="companyName">Company / Copyright holder name</param>
+      /// <param name="lineSeparator">Line separator</param>
+      public ConsoleHelper(string authorName, string companyName, string lineSeparator)
+      {
+         ConsoleData.Author = authorName;
+         ConsoleData.Company = companyName;
+         ConsoleData.LineSeparator = lineSeparator;
+      } // ConsoleHelper(string authorName, string companyName, string lineSeparator)
+
+      #endregion
+
+   }  // class ConsoleHelper
 
 }  // namespace libBAUtilCoreCS
